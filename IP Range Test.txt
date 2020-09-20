@@ -1,0 +1,42 @@
+-------------------------------------------
+Netacea Technical Test - IP Range Size
+-------------------------------------------
+
+Background:
+
+An IPv4 address is a type of network address for a server so that requests can be sent to the server.
+Usually we see IPv4 addresses written as strings such as "127.0.0.1" with four 'octets' between 0 and 255.
+This format is useful for humans to read, but they are really a representation of a 32 bit number.
+The first 8 bits of this number comprise the first octet, the second 8 bits comprise the second octet, etc.
+For example, "127.0.0.1" is the binary number 01111111 00000000 00000000 00000001 (01111111 = 127, 00000000 = 0, 00000000 = 0, 00000001 = 1)
+In this technical task, you have been tasked with finding the range between two IP address strings given in their human readable format.
+
+Task Description:
+
+Implement the 'ipRangeSize' function.
+This function takes two IPv4 addresses as inputs and returns the size of the range between the two addresses.
+The range should be inclusive of both the first and the last IP address.
+(ie. 10.0.0.0 and 10.0.0.1 is a range of 2, the IPs "10.0.0.0" and "10.0.0.1".
+
+Examples:
+
+  Input: "10.0.0.0", "10.0.0.0"			Output: 1
+  Input: "10.0.0.0", "10.0.0.1"   		Output: 2
+  Input: "10.0.0.0", "10.0.0.255"		Output: 256
+  Input: "10.0.0.0", "10.0.1.0"			Output: 257
+  Input: "10.0.0.0", "10.0.255.255"		Output: 65536
+  Input: "10.0.0.0", "10.1.0.0"			Output: 65537
+  Input: "10.0.0.0", "10.255.255.255"	Output: 16777216
+  Input: "0.0.0.0", "255.255.255.255"	Output: 4294967296
+  Input: "10.0.0.1", "10.0.0.0"   		Output: 2
+  
+The function should work for any two valid IPv4 addresses.
+There is no need to worry about how the function works for inputs that are not valid IP addresses.
+
+Hints:
+
+- https://www.howtogeek.com/341307/how-do-ip-addresses-work/ contains some information on how IP addresses work to help visualise it.
+- Use a language that you are familiar with and provide instructions for how to compile/run the solution (as applicable).
+- It would be helpful to provide a brief writeup to explain how you tackled the problem and what you have learned.
+
+Please do not look up a solution specific to this problem, but feel free to do research otherwise.
