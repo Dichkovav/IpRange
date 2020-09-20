@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
   app.post('/', (req, res) => {
    let finalInt = ipRange.ipRangeSize(req.body.ip1, req.body.ip2)
-   console.log('Това е лог: ', finalInt)
+   console.log('Тhis is log: ', finalInt)
    ejs.renderFile('views/index.ejs', {finalInt: finalInt}, {}, (err, str)=>{
     res.send(str)
    });
