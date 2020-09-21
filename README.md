@@ -1,5 +1,5 @@
 # IpRange
-IpTangeSize
+IpRangeSize
 #This is a simple application which takes two IPv4 addresses as inputs and returns the size of the range between the two addresses.
 
 1 In project directory run "npm install" interminal
